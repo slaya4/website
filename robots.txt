@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://slaya4.github.io/skibidi/sitemap.xml
+Sitemap: https://slayas.site/sitemap.xml
