@@ -243,18 +243,23 @@
   </div>
   <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 </main>
-<footer class="border-t border-white/5 py-16 text-center">
-  <button id="openTos" class="text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-magenta transition-colors">Terms of Service</button>
-    <div class="mb-8">
-    <a href="mailto:slaya.site@gmail.com" class="text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-magenta transition-colors">Contact</a>
+  <footer class="border-t border-white/5 py-16 text-center">
+  <div class="flex justify-center gap-8 mb-8">
+    <button id="openTos" class="text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-magenta transition-colors">
+      Terms of Service
+    </button>
+    <a href="mailto:slaya.site@gmail.com" class="text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-magenta transition-colors">
+      Contact
+    </a>
   </div>
-  <p class="text-zinc-600 text-[10px] font-bold tracking-[0.3em] uppercase">&copy; <span id="year"></span> Slayas Site. All rights reserved.</p>
-  <!-- shrinkme.io referral link -->
-  <div class="flex justify-center mb-8 px-4 overflow-hidden">
-      <a href="https://shrinkme.io/ref/slaya7" class="hover:scale-[1.02] transition-transform duration-500">
-        <img src="https://shrinkme.io/banners/ref/728x90GIF.gif" class="rounded-lg border border-white/5" alt="Referral" />
-      </a>
-    </div>
+  <div class="flex justify-center mb-10 px-4">
+    <a href="https://shrinkme.io/ref/slaya7" class="hover:scale-[1.02] transition-transform duration-500 block">
+      <img src="https://shrinkme.io/banners/ref/728x90GIF.gif" class="rounded-lg border border-white/5 max-w-full h-auto" alt="Referral" />
+    </a>
+  </div>
+  <p class="text-zinc-600 text-[10px] font-bold tracking-[0.3em] uppercase">
+    &copy; <span id="year"></span> Slayas Site. All rights reserved.
+  </p>
 </footer>
 <div id="tos" class="hidden fixed inset-0 bg-black/90 backdrop-blur-xl flex items-center justify-center z-[100] p-6">
   <div class="bg-panel border border-white/10 rounded-[2rem] max-w-xl w-full p-10 relative">
