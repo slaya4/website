@@ -12,6 +12,9 @@
 # Sitemap
 - [XML Sitemap](https://slayas.site/sitemap.xml): Includes all crawlable and indexable pages.
 
+# Robots.txt
+- [robots.txt](https://slayas.site/robots.txt): Provides instructions to search engine crawlers (like Googlebot) about which pages or sections they should or shouldn't access.
+
 # llms.txt spec v1.0 — generated via https://llmstxtgenerator.org
 # Build-Hash: 6F4B-9D7E-267D
 # Required for AI compatibility checks.
