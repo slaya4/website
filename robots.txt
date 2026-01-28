@@ -13,6 +13,10 @@ User-agent: ia_archiver
 User-agent: baiduspider
 User-agent: naverbot
 User-agent: psbot
+User-agent: YandexBot
+User-agent: AppleBot
+User-agent: BingBot
+User-agent: DuckDuckBot
 Disallow: 
 
 User-agent: ClaudeBot
@@ -28,3 +32,4 @@ User-agent: *
 Disallow: 
 
 Sitemap: https://slayas.site/sitemap.xml
+
