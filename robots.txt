@@ -1,8 +1,14 @@
 User-agent: Googlebot
 Disallow: 
-User-agent: googlebot-image
+User-agent: Googlebot-Image
 Disallow: 
-User-agent: googlebot-mobile
+User-agent: Googlebot-Video
+Disallow: 
+User-agent: Googlebot-Mobile
+Disallow: 
+User-agent: Google-InspectionTool
+Disallow: 
+User-agent: Google-Extended
 Disallow: 
 User-agent: MSNBot
 Disallow: 
@@ -28,6 +34,8 @@ User-agent: naverbot
 Disallow: 
 User-agent: psbot
 Disallow: 
+User-agent: ExaBot
+Disallow: 
 
 # SEO & Marketing Bots
 User-agent: AhrefsBot
@@ -51,6 +59,8 @@ Disallow:
 User-agent: GPTBot
 Disallow: 
 User-agent: ChatGPT-User
+Disallow: 
+User-agent: OAI-SearchBot
 Disallow: 
 User-agent: CCBot
 Disallow: 
@@ -76,8 +86,15 @@ User-agent: SeznamBot
 Disallow: 
 User-agent: Qwantify
 Disallow: 
+User-agent: TwitterBot
+Disallow: 
+User-agent: facebookexternalhit
+Disallow: 
+User-agent: Discordbot
+Disallow: 
 
 User-agent: *
 Disallow: 
 
 Sitemap: https://slayas.site/sitemap.xml
+
