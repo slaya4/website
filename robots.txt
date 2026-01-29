@@ -36,8 +36,6 @@ User-agent: psbot
 Disallow: 
 User-agent: ExaBot
 Disallow: 
-
-# SEO & Marketing Bots
 User-agent: AhrefsBot
 Disallow: 
 User-agent: SemrushBot
@@ -52,8 +50,6 @@ User-agent: MJ12bot
 Disallow: 
 User-agent: Pinterestbot
 Disallow: 
-
-# AI & LLM Bots
 User-agent: ClaudeBot
 Disallow: 
 User-agent: GPTBot
@@ -70,8 +66,6 @@ User-agent: Omgilibot
 Disallow: 
 User-agent: PerplexityBot
 Disallow: 
-
-# Additional Search & Regional Bots
 User-agent: Bingbot
 Disallow: 
 User-agent: Adidxbot
@@ -97,4 +91,5 @@ User-agent: *
 Disallow: 
 
 Sitemap: https://slayas.site/sitemap.xml
+
 
