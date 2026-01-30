@@ -291,7 +291,7 @@ async function fetchMoneyContent() {
         const rTit = sData.query.search[Math.floor(Math.random() * sData.query.search.length)].title;
         const cRes = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(rTit)}`);
         const data = await cRes.json();
-        if (!data.extract || data.extract.length < 350) {
+        if (!data.extract || data.extract.length < 250) {
             return fetchMoneyContent();
         }
         filler.innerHTML = `<h3 class="text-white font-bold mb-4 text-lg">${data.title}</h3><p>${data.extract}</p>`;
@@ -309,6 +309,7 @@ async function fetchMoneyContent() {
 </script>
 </body>
 </html>
+
 
 
 
