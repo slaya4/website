@@ -283,7 +283,7 @@
   }
 async function fetchMoneyContent() {
     const filler = document.getElementById('dynamic-filler');
-    const niches = ["Insurance", "improve health", "improve sleep", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
+    const niches = ["Insurance", "health", "sleep", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
     const randomNiche = niches[Math.floor(Math.random() * niches.length)];
     try {
         const sRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srsearch=${randomNiche}&srlimit=20&utf8=1`);
@@ -309,6 +309,7 @@ async function fetchMoneyContent() {
 </script>
 </body>
 </html>
+
 
 
 
