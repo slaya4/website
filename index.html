@@ -283,19 +283,24 @@
     });
   }
 
-  async function fetchMoneyContent() {
-      const filler = document.getElementById('dynamic-filler');
-      const niches = ["Insurance", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
-      const randomNiche = niches[Math.floor(Math.random() * niches.length)];
-      try {
-          const sRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srsearch=${randomNiche}&utf8=1`);
-          const sData = await sRes.json();
-          const rTit = sData.query.search[Math.floor(Math.random() * sData.query.search.length)].title;
-          const cRes = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(rTit)}`);
-          const data = await cRes.json();
-          if (data.extract) filler.innerHTML = `<h3 class="text-white font-bold mb-4 text-lg">${data.title}</h3><p>${data.extract}</p>`;
-      } catch (e) { filler.innerHTML = ""; }
-  }
+async function fetchMoneyContent() {
+    const filler = document.getElementById('dynamic-filler');
+    const niches = ["Insurance", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
+    const randomNiche = niches[Math.floor(Math.random() * niches.length)];
+    try {
+        const sRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srsearch=${randomNiche}&srlimit=20&utf8=1`);
+        const sData = await sRes.json();
+        const rTit = sData.query.search[Math.floor(Math.random() * sData.query.search.length)].title;
+        const cRes = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(rTit)}`);
+        const data = await cRes.json();
+        if (!data.extract || data.extract.length < 250) {
+            return fetchMoneyContent();
+        }
+        filler.innerHTML = `<h3 class="text-white font-bold mb-4 text-lg">${data.title}</h3><p>${data.extract}</p>`;
+    } catch (e) { 
+        filler.innerHTML = ""; 
+    }
+}
 
   renderProducts();
   fetchMoneyContent();
@@ -308,4 +313,5 @@
 </script>
 </body>
 </html>
+
 
