@@ -3,7 +3,6 @@
 <head>
 	
 	<script src="https://quge5.com/88/tag.min.js" data-zone="197563" async data-cfasync="false"></script>
-
 	<script type="text/javascript" src="//cdn-server.live/cef3f00864422a0e0f60/988fa3bda2/?placementName=default"></script>
 	
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBX5ZCSMVT"></script>
@@ -282,10 +281,9 @@
       grid.appendChild(card);
     });
   }
-
 async function fetchMoneyContent() {
     const filler = document.getElementById('dynamic-filler');
-    const niches = ["Insurance", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
+    const niches = ["Insurance", "improve health", "improve sleep", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
     const randomNiche = niches[Math.floor(Math.random() * niches.length)];
     try {
         const sRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srsearch=${randomNiche}&srlimit=20&utf8=1`);
@@ -293,7 +291,7 @@ async function fetchMoneyContent() {
         const rTit = sData.query.search[Math.floor(Math.random() * sData.query.search.length)].title;
         const cRes = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(rTit)}`);
         const data = await cRes.json();
-        if (!data.extract || data.extract.length < 250) {
+        if (!data.extract || data.extract.length < 350) {
             return fetchMoneyContent();
         }
         filler.innerHTML = `<h3 class="text-white font-bold mb-4 text-lg">${data.title}</h3><p>${data.extract}</p>`;
@@ -301,17 +299,16 @@ async function fetchMoneyContent() {
         filler.innerHTML = ""; 
     }
 }
-
   renderProducts();
   fetchMoneyContent();
   document.getElementById("search").addEventListener("input", e => renderProducts(e.target.value));
   document.getElementById("year").textContent = new Date().getFullYear();
-  
   const tos = document.getElementById("tos");
   document.getElementById("openTos").onclick = () => { tos.classList.remove("hidden"); document.body.style.overflow = "hidden"; };
   document.getElementById("closeTos").onclick = () => { tos.classList.add("hidden"); document.body.style.overflow = ""; };
 </script>
 </body>
 </html>
+
 
 
