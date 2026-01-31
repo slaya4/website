@@ -90,11 +90,18 @@ User-agent: UptimeRobot
 Disallow: 
 User-agent: FacebookBot
 Disallow: 
+User-agent: DuckAssistBot
+Disallow: 
+User-agent: PetalBot
+Disallow: 
+User-agent: Coccocbot
+Disallow: 
 
 User-agent: *
 Disallow: 
 
 Sitemap: https://slayas.site/sitemap.xml
+
 
 
 
