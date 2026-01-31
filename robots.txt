@@ -96,11 +96,14 @@ User-agent: PetalBot
 Disallow: 
 User-agent: Coccocbot
 Disallow: 
+User-agent: Applebot-Extended
+Disallow: 
 
 User-agent: *
 Disallow: 
 
 Sitemap: https://slayas.site/sitemap.xml
+
 
 
 
