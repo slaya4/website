@@ -7,7 +7,7 @@
 - [Home](https://slayas.site/): The homepage of Slayas Site serves as the central hub for gamers seeking premium game mods and tools. It showcases the latest offerings, highlights popular modifications, and provides easy navigation to various categories of game enhancements. Users can quickly access information about the available mods, their features, and how they can improve gameplay, making it an essential starting point for anyone interested in optimizing their gaming experience.
 
 # Visual map
-- [Map](https://slayas.site/map.htm): The map page provides a visual layout of the website, helping users navigate through the different sections and offerings available on Slayas Site. It outlines various categories of game mods and tools, allowing visitors to easily find specific modifications or explore new functionalities. This page is particularly useful for users who prefer a structured overview of the site’s content, ensuring they can quickly locate the resources that will enhance their gaming experience.
+- [Map](https://slayas.site/map.htm): This page provides a detailed layout of the Slayas Site, helping users navigate through the various offerings available. It includes links to different sections of the site, making it easier for visitors to find specific game mods or tools they are interested in. The map is particularly useful for new users who want to quickly locate the resources they need to enhance their gaming performance.
 
 # Sitemap
 - [XML Sitemap](https://slayas.site/sitemap.xml): Includes all crawlable and indexable pages.
@@ -15,6 +15,3 @@
 # Robots.txt
 - [robots.txt](https://slayas.site/robots.txt): Provides instructions to search engine crawlers (like Googlebot) about which pages or sections they should or shouldn't access.
 
-# llms.txt spec v1.0 — generated via https://llmstxtgenerator.org
-# Build-Hash: 6F4B-9D7E-267D
-# Required for AI compatibility checks.
