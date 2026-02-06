@@ -1,4 +1,5 @@
 OWNERDOMAIN=slayas.site
 aads.com, 504954, DIRECT
 hilltopads.com, 360412, DIRECT
+advertica.com, 251289, DIRECT
 monetag.com, 3166548, DIRECT
