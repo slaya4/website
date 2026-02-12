@@ -175,7 +175,6 @@
 </script>
 
 </head>
-	
 <body class="text-zinc-200 antialiased selection:bg-magenta selection:text-white">
 
 <!-- Navbar -->
@@ -249,6 +248,7 @@
   </div>
 </div>
 
+<!-- Scripts -->
 <script>
   fetch("https://counter.slaya7.workers.dev", { method: "POST" })
     .then(r => r.json())
@@ -256,8 +256,6 @@
       const v = document.getElementById("viewCount");
       if (v && typeof d.views === "number") v.textContent = d.views.toLocaleString() + " views";
     }).catch(() => { document.getElementById("viewCount").textContent = "— views"; });
-
-  // Downloads
   const PRODUCTS = [
     { title: "FN Chair", tag: "Mods", description: "A complete free external chair for FN.", link: "" },
     { title: "PassatHook", tag: "Mods", description: "A complete free external chair for CS2.", link: "" },
@@ -269,7 +267,6 @@
     { title: "Adobe Photoshop", tag: "Utility", description: "Full unlocked Adobe Photoshop.", link: "" },
     { title: "Adobe Premiere Pro", tag: "Utility", description: "Full unlocked Adobe Premiere Pro.", link: "" }
   ];
-	
   function renderProducts(query = "") {
     const grid = document.getElementById("grid");
     grid.innerHTML = "";
@@ -291,12 +288,9 @@
       grid.appendChild(card);
     });
   }
-
-  // Initialize
   renderProducts();
   document.getElementById("search").addEventListener("input", e => renderProducts(e.target.value));
   document.getElementById("year").textContent = new Date().getFullYear();
-  
   const tos = document.getElementById("tos");
   document.getElementById("openTos").onclick = () => { tos.classList.remove("hidden"); document.body.style.overflow = "hidden"; };
   document.getElementById("closeTos").onclick = () => { tos.classList.add("hidden"); document.body.style.overflow = ""; };
@@ -318,7 +312,3 @@ l.parentNode.insertBefore(s, l);
 	
 </body>
 </html>
-
-
-
-
