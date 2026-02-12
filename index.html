@@ -227,11 +227,6 @@
   </div>
 	<div id="grid" data-nosnippet class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 </main>
-	
-<section class="max-w-6xl mx-auto px-6 py-10">
-    <div id="dynamic-filler" class="bg-panel border border-white/5 rounded-2xl p-8 text-zinc-500 text-sm leading-relaxed">
-        </div>
-</section>
 
 <!-- Footer -->
 <footer class="border-t border-white/5 py-16 text-center">
@@ -254,7 +249,6 @@
   </div>
 </div>
 
-<!-- Scripts -->
 <script>
   fetch("https://counter.slaya7.workers.dev", { method: "POST" })
     .then(r => r.json())
@@ -263,17 +257,17 @@
       if (v && typeof d.views === "number") v.textContent = d.views.toLocaleString() + " views";
     }).catch(() => { document.getElementById("viewCount").textContent = "— views"; });
 
-	// Downloads
+  // Downloads
   const PRODUCTS = [
-	{ title: "FN Chair", tag: "Mods", description: "A complete free external chair for FN.", link: "" },
+    { title: "FN Chair", tag: "Mods", description: "A complete free external chair for FN.", link: "" },
     { title: "PassatHook", tag: "Mods", description: "A complete free external chair for CS2.", link: "" },
     { title: "SecHex", tag: "Utility", description: "A HWID Spoofer for game bans.", link: "https://shrinkme.click/SecHex" },
     { title: "CheatEngine", tag: "Utility", description: "A universal game memory editor.", link: "https://shrinkme.click/CheatEngine" },
     { title: "File Fixer", tag: "Utility", description: "Utility for fixing game files.", link: "https://shrinkme.click/TfVl8uq" },
-	{ title: "Spotify Premium Tool", tag: "Utility", description: "Unlock Spotify Premium features.", link: "" },
-	{ title: "Windows Activation Tool", tag: "Utility", description: "Activate Windows permanently.", link: "" },
-	{ title: "Adobe Photoshop", tag: "Utility", description: "Full unlocked Adobe Photoshop.", link: "" },
-	{ title: "Adobe Premiere Pro", tag: "Utility", description: "Full unlocked Adobe Premiere Pro.", link: "" }
+    { title: "Spotify Premium Tool", tag: "Utility", description: "Unlock Spotify Premium features.", link: "" },
+    { title: "Windows Activation Tool", tag: "Utility", description: "Activate Windows permanently.", link: "" },
+    { title: "Adobe Photoshop", tag: "Utility", description: "Full unlocked Adobe Photoshop.", link: "" },
+    { title: "Adobe Premiere Pro", tag: "Utility", description: "Full unlocked Adobe Premiere Pro.", link: "" }
   ];
 	
   function renderProducts(query = "") {
@@ -297,28 +291,12 @@
       grid.appendChild(card);
     });
   }
-async function fetchMoneyContent() {
-    const filler = document.getElementById('dynamic-filler');
-    const niches = ["Insurance", "Loans", "Investment", "Mortgage", "Banking", "Crypto", "Credit Cards", "Tax Planning", "Debt Relief", "Estate Planning", "Payment Processing"];
-    const randomNiche = niches[Math.floor(Math.random() * niches.length)];
-    try {
-        const sRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&list=search&srsearch=${randomNiche}&srlimit=20&utf8=1`);
-        const sData = await sRes.json();
-        const rTit = sData.query.search[Math.floor(Math.random() * sData.query.search.length)].title;
-        const cRes = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(rTit)}`);
-        const data = await cRes.json();
-        if (!data.extract || data.extract.length < 250) {
-            return fetchMoneyContent();
-        }
-        filler.innerHTML = `<h3 class="text-white font-bold mb-4 text-lg">${data.title}</h3><p>${data.extract}</p>`;
-    } catch (e) { 
-        filler.innerHTML = ""; 
-    }
-}
+
+  // Initialize
   renderProducts();
-  fetchMoneyContent();
   document.getElementById("search").addEventListener("input", e => renderProducts(e.target.value));
   document.getElementById("year").textContent = new Date().getFullYear();
+  
   const tos = document.getElementById("tos");
   document.getElementById("openTos").onclick = () => { tos.classList.remove("hidden"); document.body.style.overflow = "hidden"; };
   document.getElementById("closeTos").onclick = () => { tos.classList.add("hidden"); document.body.style.overflow = ""; };
@@ -340,6 +318,7 @@ l.parentNode.insertBefore(s, l);
 	
 </body>
 </html>
+
 
 
 
