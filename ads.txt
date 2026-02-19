@@ -1,3 +1,5 @@
 OWNERDOMAIN=slayas.site
 monetag.com, 3166548, DIRECT
 aads.com, 504954, DIRECT
+advertica.com, 251289, DIRECT
+
