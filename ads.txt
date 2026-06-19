@@ -1,2 +1,0 @@
-OWNERDOMAIN=slayas.site
-monetag.com, 3166548, DIRECT
