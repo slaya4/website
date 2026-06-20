@@ -262,6 +262,138 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
     </main>
 
+    <!-- Payment Methods -->
+    <section class="max-w-6xl mx-auto w-full px-4 sm:px-6 mb-24">
+      <div
+        class="w-full px-6 py-10 sm:px-12 sm:py-14 rounded-3xl relative overflow-hidden"
+        style="
+          background: var(--glass);
+          backdrop-filter: blur(14px) saturate(160%);
+          -webkit-backdrop-filter: blur(14px) saturate(160%);
+          border: 1px solid var(--border);
+        "
+      >
+        <div
+          class="pointer-events-none absolute inset-0 z-0"
+          style="
+            background-image: radial-gradient(
+              ellipse 60% 40% at 50% 0%,
+              var(--glow-1),
+              transparent 70%
+            );
+          "
+        ></div>
+        <div class="relative z-10">
+          <div class="text-center mb-10">
+            <h2
+              class="text-2xl sm:text-3xl font-bold text-[var(--text)] tracking-tight mb-2"
+            >
+              Payment Methods
+            </h2>
+            <p class="text-sm sm:text-base text-muted font-normal">
+              Industry-leading security standards to protect your transactions
+            </p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 mb-5">
+            <div
+              class="card flex flex-col items-center gap-4 rounded-2xl px-4 pt-8 pb-7 hover:[border-color:rgba(247,147,26,0.45)] hover:[box-shadow:0_12px_40px_-12px_rgba(247,147,26,0.35)]"
+            >
+              <i class="fa-brands fa-bitcoin text-[36px]" style="color: #f7931a"></i>
+              <span
+                class="text-xs font-bold uppercase tracking-widest leading-none"
+                style="color: #f7931a"
+              >
+                Bitcoin
+              </span>
+            </div>
+            <div
+              class="card flex flex-col items-center gap-4 rounded-2xl px-4 pt-8 pb-7 hover:[border-color:rgba(52,93,157,0.45)] hover:[box-shadow:0_12px_40px_-12px_rgba(52,93,157,0.35)]"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="11" fill="#345d9d" />
+                <path
+                  fill="#ffffff"
+                  d="M10.7 15.5h4.8l-.4 1.7H8.2l1.2-4.5-1.3.4.3-1.5 1.3-.4 1.7-6.3h2.8l-1.5 5.7 1.3-.4-.3 1.5-1.3.4z"
+                />
+              </svg>
+              <span
+                class="text-xs font-bold uppercase tracking-widest leading-none"
+                style="color: #345d9d"
+              >
+                Litecoin
+              </span>
+            </div>
+            <div
+              class="card flex flex-col items-center gap-4 rounded-2xl px-4 pt-8 pb-7 hover:[border-color:rgba(124,77,255,0.45)] hover:[box-shadow:0_12px_40px_-12px_rgba(124,77,255,0.35)]"
+            >
+              <i class="fa-brands fa-stripe-s text-[36px]" style="color: #7c4dff"></i>
+              <span
+                class="text-xs font-bold uppercase tracking-widest leading-none"
+                style="color: #7c4dff"
+              >
+                Stripe
+              </span>
+            </div>
+            <div
+              class="card flex flex-col items-center gap-4 rounded-2xl px-4 pt-8 pb-7 hover:[border-color:rgba(0,112,186,0.45)] hover:[box-shadow:0_12px_40px_-12px_rgba(0,112,186,0.35)]"
+            >
+              <i class="fa-brands fa-paypal text-[36px]" style="color: #0070ba"></i>
+              <span
+                class="text-xs font-bold uppercase tracking-widest leading-none"
+                style="color: #0070ba"
+              >
+                PayPal
+              </span>
+            </div>
+          </div>
+          <div class="h-px my-5" style="background: var(--border)"></div>
+          <div
+            class="flex flex-col sm:flex-row items-center sm:justify-between gap-4 text-center sm:text-left rounded-xl p-5 sm:py-4 sm:px-5 chip border-[rgba(88,101,242,0.2)]"
+            style="background: rgba(88, 101, 242, 0.06)"
+          >
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                style="
+                  background: rgba(88, 101, 242, 0.14);
+                  border: 1px solid rgba(88, 101, 242, 0.2);
+                "
+              >
+                <i class="fa-brands fa-discord text-lg" style="color: #5865f2"></i>
+              </div>
+              <div>
+                <strong
+                  class="block text-sm font-medium text-[var(--text)] mb-0.5 leading-snug"
+                >
+                  Don't see your payment method?
+                </strong>
+                <span class="text-xs text-muted font-normal leading-snug">
+                  Join our Discord for more options &amp; custom arrangements
+                </span>
+              </div>
+            </div>
+            <a
+              id="discord-server-link" target="_blank" rel="noopener"
+              class="w-full sm:w-auto text-center inline-block px-5 py-3 sm:py-2 rounded-lg text-sm font-medium no-underline whitespace-nowrap transition-colors"
+              style="
+                color: #5865f2;
+                background: rgba(88, 101, 242, 0.1);
+                border: 1px solid rgba(88, 101, 242, 0.22);
+              "
+              onmouseover="this.style.background = 'rgba(88,101,242,0.2)'"
+              onmouseout="this.style.background = 'rgba(88,101,242,0.1)'"
+              >Join &#8594;</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="border-t border-white/5 py-12 text-center px-6">
       <div class="flex flex-wrap justify-center gap-6 sm:gap-8 mb-6">
